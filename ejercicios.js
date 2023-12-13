@@ -64,3 +64,85 @@ function letra(){
         alert( "Se ha equivocado de letra");
     }
 }
+
+/*Una función que devuelva el número de cifras de un entero 
+solicitado al usuario*/
+function cifras(){
+    let numero = prompt("Introduce un número");
+    let cifras = numero.length;
+    alert(cifras)
+}
+
+
+/*Una función que muestre al usuario una secuencia 
+de * (se debe construir la cadena de uno en uno), 
+la cantidad de * será solicitada al usuario*/
+function asteriscos(){
+    let cadena = prompt("Introduce cuantos * quieres");
+    let dibujo = " ";
+    for(let i=0; i<cadena; i++){
+        dibujo+="*";
+    }
+    alert(dibujo);
+}
+
+/*Una función que permita mostrar la secuencia 
+(se debe construir la cadena de uno en uno):
+ *+_*+_*+_*+_ */
+// function secuencia(){
+//     let peticion = prompt("Introcuce las veces que quieres la secuencia");
+//     let secuencia = '';
+
+//     for (let i = 0; i < peticion; i++) {
+//       if (i % 3 == 0) {
+//         secuencia += '*';
+//       } else if {
+//         secuencia += '+';
+//       }else  {
+//         secuencia += '_';
+//       }
+//     }
+//     console.log(secuencia);
+  
+// }
+
+// function secuencia() {
+//     let cantidad = prompt("Introduce la cantidad de repeticiones:");
+//     let opcion1 = "*";
+//     let opcion2 = "+";
+//     let opcion3 = "_";
+//     let resultado = " ";
+
+//     for(let i=0; i<cantidad; i++){
+//         if()
+//     }
+
+/*Una función que permita mostrar un triángulo como el siguiente:
+*
+**
+***
+****
+*****
+*/
+function triangulo(filas) {
+    for (let i = 1; i <= filas; i++) {
+      let linea = '';
+      for (let j = 1; j <= i; j++) {
+        linea += '*';
+        
+      }
+      console.log(linea);
+    }
+  }
+  
+  triangulo(5);
+
+  /*Una función que devuelva la diferencia 
+  en días entre dos fechas del mismo año (sólo tenemos en cuenta dia y mes)*/
+  function fecha(){
+    let fecha1 = prompt("Introduce 1 fecha");
+    let fecha2 = prompt("Introduce fecha 2");
+
+    
+  }
+
