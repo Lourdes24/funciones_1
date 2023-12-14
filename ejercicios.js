@@ -149,26 +149,52 @@ function secuencia(){
 *****
 */
 function triangulo(filas) {
+    let triaPintado = " ";
     for (let i = 1; i <= filas; i++) {
       let linea = '';
       for (let j = 1; j <= i; j++) {
         linea += '*';
         
       }
-      console.log(linea);
+     
+      triaPintado += linea + "\n";
+    
     }
+    console.log(triaPintado)
+    alert(triaPintado);
   }
   
-  triangulo(5);
+ 
 
 
 
   /*Una función que devuelva la diferencia 
   en días entre dos fechas del mismo año (sólo tenemos en cuenta dia y mes)*/
   function fecha(){
-    let fecha1 = prompt("Introduce 1 fecha");
-    let fecha2 = prompt("Introduce fecha 2");
+    let frase="Esta frase es una frase larga de ejemplo";
+    let arrayFrase = frase.split(" ");//convierte la frase en 
+    console.log (arrayFrase.length);
+
+//     let fecha1 = prompt("Introduce 1 fecha");
+//     let fecha2 = prompt("Introduce fecha 2");
+//     console.log(fecha1);
+
+
+//     let arrayDate1 = date1.split("-"); //convierte la fecha en array, es decir mete los datos en dos columnas en este caso
+//     let arrayDate2 = date2.split("-");
+
+//     //Construimos array
+//     let day1= arrayDate1[0];
+//     let month1 = arrayDate1[1];
+//     let day2= arrayDate2[0];
+//     let month2 = arrayDate2[1];
+
+//     let months =[31,28,31,30,31,30,31,31,30,31,30,31];
+
+//     let resultado = months [month1-1] 
+
+ }
 
     
-  }
+  
 
