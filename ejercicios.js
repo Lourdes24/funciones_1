@@ -16,18 +16,18 @@ function menor(){
 
 function repletra(){
     let frase = prompt ("Introduce una frase:");
-        let letra = prompt ("Introduce una letra");
-        let contador = 0;
-        for (let i = 0; i < frase.length ; i++){
-         
-         console.log(frase[i].toLowerCase());
-         console.log(letra.toLowerCase());
+    let letra = prompt ("Introduce una letra");
+    let contador = 0;
+    for (let i = 0; i < frase.length ; i++){
+        
+        console.log(frase[i].toLowerCase());
+        console.log(letra.toLowerCase());
 
-            if (frase[i].toLowerCase() == letra.toLowerCase()) {
-            contador++;
-         }
+        if (frase[i].toLowerCase() == letra.toLowerCase()) {
+        contador++;
         }
-        alert ("El número de veces que se repite la letra " + letra + " es " + contador);
+    }
+    alert ("El número de veces que se repite la letra " + letra + " es " + contador);
 }
 
 
@@ -89,6 +89,28 @@ function asteriscos(){
 /*Una función que permita mostrar la secuencia 
 (se debe construir la cadena de uno en uno):
  *+_*+_*+_*+_ */
+function secuencia(){
+    let char = " ";
+    let sec = "";
+    for (let i = 0; i<1; i++){
+        switch(i%3){
+            case 0:
+                char= "*";
+                break;
+            case 1:
+                char= "+";
+                break;
+            case 2:
+            char= "_";
+            break;
+
+        }
+        sec = sec + char;
+    }
+    alert(sec)
+}
+
+
 // function secuencia(){
 //     let peticion = prompt("Introcuce las veces que quieres la secuencia");
 //     let secuencia = '';
@@ -117,6 +139,8 @@ function asteriscos(){
 //         if()
 //     }
 
+
+
 /*Una función que permita mostrar un triángulo como el siguiente:
 *
 **
@@ -136,6 +160,8 @@ function triangulo(filas) {
   }
   
   triangulo(5);
+
+
 
   /*Una función que devuelva la diferencia 
   en días entre dos fechas del mismo año (sólo tenemos en cuenta dia y mes)*/
