@@ -1,3 +1,4 @@
+//------------Ejercicio 1
 function menor(){
     let n1 = prompt ("Introduce el primer número");
         let n2 = prompt ("Introduce el segundo número");
@@ -13,6 +14,8 @@ function menor(){
             alert("El número menor es:" + n3);
         }
 }
+
+//--------------Ejercicio 2
 
 function repletra(){
     let frase = prompt ("Introduce una frase:");
@@ -31,6 +34,7 @@ function repletra(){
 }
 
 
+//--------------Ejercicio 3
 
 function calculo(){
     let numero1 = parseInt(prompt("Introduce el primer numero:"));
@@ -65,6 +69,7 @@ function letra(){
     }
 }
 
+//--------------Ejercicio 4
 /*Una función que devuelva el número de cifras de un entero 
 solicitado al usuario*/
 function cifras(){
@@ -74,6 +79,7 @@ function cifras(){
 }
 
 
+//--------------Ejercicio 5
 /*Una función que muestre al usuario una secuencia 
 de * (se debe construir la cadena de uno en uno), 
 la cantidad de * será solicitada al usuario*/
@@ -86,6 +92,7 @@ function asteriscos(){
     alert(dibujo);
 }
 
+//--------------Ejercicio 6
 /*Una función que permita mostrar la secuencia 
 (se debe construir la cadena de uno en uno):
  *+_*+_*+_*+_ */
@@ -111,6 +118,7 @@ function secuencia(){
 }
 
 
+//--------------Ejercicio 7
 // function secuencia(){
 //     let peticion = prompt("Introcuce las veces que quieres la secuencia");
 //     let secuencia = '';
@@ -140,7 +148,7 @@ function secuencia(){
 //     }
 
 
-
+//--------------Ejercicio 8
 /*Una función que permita mostrar un triángulo como el siguiente:
 *
 **
@@ -167,7 +175,7 @@ function triangulo(filas) {
  
 
 
-
+//--------------Ejercicio 9
   /*Una función que devuelva la diferencia 
   en días entre dos fechas del mismo año (sólo tenemos en cuenta dia y mes)*/
   function fecha(){
@@ -195,6 +203,117 @@ function triangulo(filas) {
 
  }
 
-    
-  
 
+ //--------------Ejercicio 10
+ //Escribe una función que calcule el promedio de calificaciones
+ function calificaciones(){
+    let notas = [5,9,6,7,7,8,5,2];
+    let suma =0; //inicializamos suma en 0
+    //media = suma todas notas/num notas
+    for(let i=0; i<notas.length; i++);{
+        suma += notas[i]; //suma = suma + notas[i]
+    }
+
+    //otra forma de expresarlo
+    //for(let i=0; i<=notas.length-1; i++){
+    //console.log(notas[i]);
+    //suma = suma + notas[i];
+    //}
+    console.log(suma/notas.length); //mide la longitud de la array
+    //logitud de la array = numeros naturales, empieza en 1
+    //posiciones de la array = empieza desde 0
+    return
+ }
+
+    
+ //--------------Ejercicio 11
+  /*Escribe una función que devuelva el valor máximo de los números 
+  enteros dados. Los números vendrán en un array 
+  tipo numeros = [4,2,5,1,3,8,9].
+  */
+ //max = numero [0]; inicializa en primera posición de la array
+ //max = 0; esta opción sería para numeros positivos, para cuando conozcamos
+ //los valores de las arrays
+ //for para recorrer la array
+ //if para comparar los número de la array 
+ function maximo(){
+    let numeros = [4,2,5,1,3,8,9];
+    let max = numeros [0];
+    //recorrido desde posición 1
+    //no tiene sentido comparar el primer elemento consigo mismo
+    for (let i=1; i<numeros.length; i++){
+        if(max <numeros[i]){
+            max = numeros[i];
+        }
+        console.log(max)
+    }
+ }
+
+
+ //--------------Ejercicio 12
+
+//Crea una función que tome una cadena de texto y 
+//devuelva el número de palabras únicas en ella.
+
+// function cuentaPalabras(frase){
+//     console.log(frase.split(""));
+//     console.log(frase.split(" ").length);
+//     return frase.split(" ").length;
+// }
+// let frase="Esta frase tiene 5 palabras"
+
+// alert (cuentaPalabras(frase)); //cuenta las palabras de la frase
+
+//Busca los número pares de un array y crea un nuevo array con ellos.
+            // function buscaPares(numeros){
+            //     let numeros_pares = [];
+            // }
+            // let array =[1,2,3,4,5,6];
+            // console.log(array);
+            // console.log("-------------");
+
+            // array.push(7);
+            // console.log(array);
+
+ // Itera a través del array de números
+ function buscaPares(numeros) {
+    let numeros_pares = [];
+  
+    // Itera a través del array de números
+    for (let i = 0; i < numeros.length; i++) {
+      if (numeros[i] % 2 == 0) {
+        // Si el número es par, añadirlo al array numeros_pares
+        numeros_pares.push(numeros[i]); //añade el valor de lo pares
+        //numeros_pares.push(i) Añadiría la posición de los pares
+      }
+    }
+  
+    return numeros_pares;
+  }
+  
+  // Ejemplo 
+  let array = [1, 2, 3, 4, 5, 6];
+  console.log("Array dada:", array);
+  console.log("-------------");
+  
+  array.push(7);
+  console.log("Array con un nuevo elemento:", array);
+  
+  // Encontrar y mostrar los números pares del array
+  let numerosParesEncontrados = buscaPares(array);
+  console.log("Números pares encontrados:", numerosParesEncontrados);
+
+
+  //--------------Ejercicio 13
+
+  //Dado un array, duplica cada uno de sus elementos. 
+  //Imprime por consola el nuevo array resultante.
+  function arrayClonada(){
+    let array = ["nom1", "nom2", "nom3"];
+
+    for(let i=0; i<array.length; i++){
+        nuevo_array.push(array[i]);
+    }
+    console.log(nuevo_array);
+  }
+  
