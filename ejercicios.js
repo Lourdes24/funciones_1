@@ -317,3 +317,18 @@ function triangulo(filas) {
     console.log(nuevo_array);
   }
   
+  function buscarElemento(){
+    let elento =5;
+    let array =[4,3,2,5,6,7,8];
+
+    for(let i=0; i<array.length; i++){
+        console.log(i);
+        if(elemento == array[i]){
+            console.log(true);
+            break;
+        }
+    }
+  }
+  buscarElemento()
+
+  function eliminaElemDuplicado
