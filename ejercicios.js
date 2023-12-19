@@ -331,4 +331,256 @@ function triangulo(filas) {
   }
   buscarElemento()
 
-  function eliminaElemDuplicado
+
+
+
+
+ // 1. Escribe una función que calcule el promedio de calificaciones de un grupo de estudiantes. Todas las notas de los estudiantes vendrán dadas en un array de tipo notas = [7,8,9,4,....]
+
+function calificaciones(){
+    let notas = [5,9,6,7,7,8,5,2];
+    let suma = 0;
+
+    // for (let i = 0; i < notas.length; i++) {
+    //     console.log(notas[i]);
+    //     suma = suma + notas[i];  
+    // }
+
+    for (let i = 0; i <= notas.length; i++) {
+        console.log(notas[i]);
+        suma = suma + notas[i];  
+    }
+
+    let resultado = suma/notas.length;
+    return resultado;
+    // return suma/notas.length;
+}
+
+
+// let promedio = calificaciones();
+
+function mostrarNum(){
+    for (let i = 1; i < 11 ; i++) {
+        console.log(i);
+    }
+}
+
+// mostrarNum();
+
+//2. Escribe una función que devuelva el valor máximo de los números enteros dados. Los números vendrán en un array tipo numeros = [4,2,5,1,3,8,9].
+function maximo(){
+    let numeros = [4,9,5,1,3,8,2];
+    let max = numeros[0];
+    //En este caso, podemos recorrer el array desde la segunda posición .
+    //No tiene sentido comparar el primer elemento con si mismo. 
+    for (let i = 1; i < numeros.length; i++) {
+        if(max < numeros[i]){
+            max = numeros[i];
+        }
+    }
+    console.log(max);
+}
+
+// maximo();
+
+// 3. Crea una función que tome una cadena de texto y devuelva el número de palabras únicas en ella.
+function cuentaPalabras(frase){
+    let arrayFrase = frase.split(" ");
+    let numPalabras = arrayFrase.length
+    return numPalabras;
+    //return frase.split(" ").length;
+}
+
+let frase2 = "Iba una vez por el bosque Caperucita";
+let frase = "Esta frase tiene cinco palabras"
+// alert(cuentaPalabras(frase2));
+
+
+// let fecha = "15-03-2023";
+let nombre_directorio = "carpeta_nueva_de_videos"
+
+// console.log(frase2.split(" ").length);
+// console.log(fecha.split("-"));
+// console.log(nombre_directorio.split("_"));
+
+
+//4. Busca los número pares de un array y crea un nuevo array con ellos.
+
+function buscaPares(){
+    let nums = [2,3,4,5,6,7,8,9];
+    let pares = [];
+    for (let i = 0; i < nums.length; i++) {
+         if(nums[i] % 2 == 0){
+            pares.push(nums[i]);
+         }
+    }
+    return pares;
+}
+
+
+// 5. Dado un array, duplica cada uno de sus elementos. Imprime por consola el nuevo array resultante.
+function duplicar(){
+    let nombres = ["Lorena", "Pepito", "Juanito"];
+    let nuevo_array = [];
+
+    // for (let i = 0; i < nombres.length; i++) {
+    //     nuevo_array.push(nombres[i]);
+    // }
+
+    // element => nombres[i]
+    nombres.forEach(element => {
+        nuevo_array.push(element);
+    });
+
+    console.log(nuevo_array);
+}
+
+duplicar();
+
+
+// 6. Escribe una función que busque un elemento en un array.
+function buscarElemento(elemento, array1){
+    encontrado = false;
+    for (let i = 0; i < array.length; i++) {
+        if(elemento == array[i]){
+            encontrado = true;
+            break;
+        }
+    }
+    
+    console.log(encontrado);
+    return encontrado; //Se añade la última para devolver el resultado saliendo de la función
+}
+    let array1 = [4,3,2,5,6,7,8];
+    let elemento= 5;
+
+buscarElemento(elemento, array1)
+
+
+
+// 7. Escribe una función que elimine los elementos duplicados de un array.
+function eliminaDuplicados(){
+    let miArray = [1,5,2,3,4,5,3,4];
+    let newArray = [];
+
+    for (let i = 0; i < miArray.length; i++) { 
+        let encontrado = buscarElemento(miArray[i],newArray);
+        if(encontrado == false){
+            newArray.push(miArray[i]);
+        }  
+    }
+
+    console.log(newArray);
+}
+
+eliminaDuplicados()
+
+// //Ejercicio recoge tu edad o muéstrala
+// function mostrarDato(dato){
+//     console.log(dato);
+// }
+
+// function recogeDato(){
+//     let data=prompt("Introduce tu edad:");
+//     console.log(dato);
+// }
+
+//8. Crea una función que invierta los elementos de un array.
+function invertirArray(){
+    let array =[1,2,3,4,5];
+    let newArray = [];
+
+    for (let i=array.lent -1; i>=0; i--){
+        newArray.push(array[i]);
+    }
+    console.log(newArray);
+}
+invertirArray();
+
+//9. Crea una función que cuente los vocales de una cadena de caracteres.
+function contarVocales(){
+    let frase ="Cuantas vocales tengo";
+    // console.log(frase.length);
+    // console.log(frase[0]);
+    let contador =0;
+    
+    for (let i=0; i<frase.length; i++){
+        if(frase[i] == "a" || frase[i] == "e" || frase[i] == "i" || frase[i] == "o" || frase[i] == "u"){
+            contador++;
+        }
+            
+        }
+      
+    console.log("Esta frase tiene:" +contador+ "vocales.");
+
+}
+contarVocales();
+
+/*10. Desarrolla una función que determine si una palabra o 
+frase es un palíndromo (se lee igual de izquierda a derecha 
+    que de derecha a izquierda) ignorando espacios y signos 
+    de puntuación. Por ejemplo "Dábale arroz a la zorra el abad".
+    */
+
+//11. Dada una frase, calcula la longitud de cada palabra y muestra el resultado.
+function longitudPalabras(){
+    let frase = "Esto es una frase";
+    //console.log(frase.lenght); Nos cuenta todos los caracteres de la frase
+    let arrayFrase = frase.split (" ");
+
+    for(let i=0; i<arrayFrase.length; i++){
+        console.log(arrayFrase[i] +":esta palabra tiene" + longitudPalabras+ "letras.")
+    }
+    
+}
+longitudPalabras();
+
+
+// 12. Ahora escribe una función que invierta una cadena de caracteres.
+function invierteCaracter(){
+    let cadena="Invertiré esta cadena";
+    let newCadena=" ";
+
+    for(let i= cadena.length -1; i>=0; i--){
+        newCadena +=cadena[i];
+        console.log(cadena[i]); //Muestra la cadena letra a letra
+    }
+    console.log(cadena); //Muestra la cadena dada
+    console.log(newCadena); //Muestra la cadena invertida
+}
+invierteCaracter();
+
+
+/*13. Escribe una función que convierta grados Celsius a Fahrenheit y viceversa.
+*Grados centígrados =(grados Fahrenheit -32) x5/9.
+*Grados Fahrenheit = (grados cetígrados x 9/5) +32
+*/
+function convertirGrados(grados){
+    let gradosFahrenheit = (gradosCentígrados * 9/5) +32;
+    console.log(gradosCentígrados+ "º en Fahrenheit son " +gradosFahrenheit)
+
+}
+let degrees = prompt ("Introduce los grados: ");
+convertirGrados(degrees);
+
+/*13a. Escribe una función que convierta grados Celsius a Fahrenheit y viceversa.
+*Grados centígrados =(grados Fahrenheit -32) x5/9.
+*Grados Fahrenheit = (grados cetígrados x 9/5) +32
+*/
+function convertirGrados2(grados){
+    let gradosFahrenheit = (gradosCentígrados * 9/5) +32;
+    console.log(gradosCentígrados+ "º en Fahrenheit son " +gradosFahrenheit)
+
+}
+let degrees = prompt ("Introduce los grados: ");
+convertirGrados2(degrees);
+
+/*14. Crea un juego donde el programa elige un número aleatorio 
+*y el jugador tiene que adivinarlo, recibiendo pistas sobre 
+* si es mayor o menor en cada intento,
+*/
+function adivinar(){
+    let numRandom = getRandomInt(100);
+
+}
+adivinar();
